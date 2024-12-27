@@ -19,7 +19,7 @@ const Home = ({ country, query, setQuery, theme }) => {
         ) : (
           country
             .filter((country) =>
-              country.name.common.toLowerCase().includes(query)
+              country.name.common.toLowerCase().includes(query.toLowerCase())
             )
             .map((countryItem, index) => (
               <CountryCard
